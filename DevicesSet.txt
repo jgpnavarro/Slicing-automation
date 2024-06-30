@@ -1,0 +1,11 @@
+[Device1]
+stf_device_serial = RZCW122ARBL
+APPIUM_PORT = 4723
+SCREENSHOT_FILE = SpeedTestResult.png
+APPIUM_OUTPUT = log-appium-RZCW122ARBL.log
+
+[Device2]
+stf_device_serial = 754dfe11
+APPIUM_PORT = 4823
+SCREENSHOT_FILE = SpeedTestResult_2.png
+APPIUM_OUTPUT = log-appium-754dfe11.log

@@ -1,0 +1,9 @@
+==============================================================================
+SpeedTestApp :: This test suite contains tests that use STF and Appium to p...
+==============================================================================
+Execute SpeedTest                                                     | PASS |
+------------------------------------------------------------------------------
+SpeedTestApp :: This test suite contains tests that use STF and Ap... | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  /home/jenkins/agent/workspace/practica_slices_single-SpeedTest/Output/pabot_results/1/0/output.xml

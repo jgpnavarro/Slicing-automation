@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  adbd:
+    container_name: adbd
+    image: sorccu/adb:latest
+    restart: unless-stopped
+    privileged: true
+    volumes:
+      - "/dev/bus/usb:/dev/bus/usb"
+      - "./android_keys:/root/.android"
+
+  rethinkdb:
+    container_name: rethinkdb
+    image: rethinkdb:2.4
+    command: "rethinkdb --bind all --cache-size 2048"
+    restart: unless-stopped
+    volumes:
+      - "./rethinkdb:/data"
+
+  stf:
+    container_name: stf
+    image: devicefarmer/stf:latest
+    command: stf local --adb-host adbd --public-ip ${PUBLIC_IP} --provider-min-port 7400 --provider-max-port 7500
+    restart: unless-stopped
+    ports:
+      - "7100:7100"
+      - "7110:7110"
+      - "7400-7500:7400-7500"
+    environment:
+      - TZ='Europe/Madrid'
+      - RETHINKDB_PORT_28015_TCP=tcp://rethinkdb:28015
+      - STF_ADMIN_EMAIL=email@something.something
+      - STF_ADMIN_NAME=something
+      - SCREEN_JPEG_QUALITY=20

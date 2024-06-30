@@ -1,0 +1,9 @@
+Appium-Python-Client==3.2.1
+robotframework==7.0
+robotframework-appiumlibrary==2.0.0
+robotframework-openstf==1.1.4
+robotframework-pabot==2.18.0
+robotframework-stacktrace==0.4.1
+selenium==4.16.0
+stf-appium-client==0.11.0
+stf-client==0.1.0
