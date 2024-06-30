@@ -5,7 +5,7 @@ Este repositorio incluye los archivos necesarios para realizar unas pruebas de a
 ## Docker 
 El repositorio incluye los siguientes archivos de Docker en caso de querer realizar la automatización a través de un contenedor Docker y también el Docker-compose.yaml para desplegar un STF:
 - [`docker-compose.yaml`](https://github.com/jgpnavarro/Slicing-automation/blob/main/docker-compose.yaml): Despliega un STF (Smartphone Test Farm) utilizando Docker Compose.
-- [`Dockerfile`](https://github.com/jgpnavarro/Slicing-automation/blob/main/Dockerfile): Prepara una imagen de Docker con Appium y las configuraciones necesarias para la automatización de las pruebas con RobotFramework y Appium.
+- [`Dockerfile`](https://github.com/jgpnavarro/Slicing-automation/blob/main/Dockerfile): Prepara una imagen de Docker con Appium y las configuraciones necesarias para la automatización de las pruebas con RobotFramework y Appium. Las variables Proxy y no_Proxy del principio del archivo deben completarse con las direcciones a las cuales queremos y no queremos que se conecte el contenedor para descargar archivos mientras se construye. Luego podemos ver como se limpian dichas variables de entorno.
 - Para construir la imagen local incluida en el repositorio, primero ejecuta desde la carpeta base:
 
 ```bash
